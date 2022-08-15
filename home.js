@@ -1,5 +1,11 @@
 function Home(){
     return (
-        <h1>Home</h1>
+        <Card 
+            txtcolor="black"
+            header="BigBadBank"
+            title="Bank Away!"
+            body={(<img src="bank.png" />)}
+        />   
+
     );
 }
