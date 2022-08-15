@@ -28,8 +28,8 @@ function withdraw(){
         body= {show? (inUser ? (
             <>
 
-            <h5>{update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h5>
-            <h6>Withdraw This Amount</h6>
+            <h2>{update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h2>
+            <h3>Withdraw This Amount</h3>
             <input type="number" width="300" id="balance" onChange={handleTextChange} value={value}></input>
             <button type="submit" disabled={ value ?false:true} className="btn btn-light" onClick={handleWithdraw}>Withdraw it now!</button>
 
