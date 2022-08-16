@@ -34,7 +34,7 @@ function Withdraw(){
             <button type="submit" disabled={ value ?false:true} className="btn btn-primary" onClick={handleWithdraw}>Withdraw it now!</button>
 
             </>
-        ):("Login to see Balance")) : ("Accepted! Your Balance: $" + inUser.user.balance)}
+        ): ("Accepted! Your Withdraw: $" + inUser.user.balance)}
        />
     )
         }
