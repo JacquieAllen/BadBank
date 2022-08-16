@@ -1,4 +1,4 @@
-function withdraw(){
+function Withdraw(){
     const ctx = React.useContext(UserContext);
     let inUser = ctx.loggedIn[0];
     const [update, setUpdate] = React.useState('false');
@@ -31,7 +31,7 @@ function withdraw(){
             <h2>{update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h2>
             <h3>Withdraw This Amount</h3>
             <input type="number" width="300" id="balance" onChange={handleTextChange} value={value}></input>
-            <button type="submit" disabled={ value ?false:true} className="btn btn-light" onClick={handleWithdraw}>Withdraw it now!</button>
+            <button type="submit" disabled={ value ?false:true} className="btn btn-primary" onClick={handleWithdraw}>Withdraw it now!</button>
 
             </>
         ):("Login to see Balance")) : ("Accepted! Your Balance: $" + inUser.user.balance)}
