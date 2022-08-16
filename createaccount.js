@@ -66,12 +66,12 @@ function CreateAccount(){
                 <input type="input" className="form-control" id="email" placeholder="Enter Your Email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br/>
                 Password<br/>
                 <input type="input" className="form-control" id="password" placeholder="Enter Your Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br/>
-                <button type="submit" disabled={ (name && email && password) ?false:true} className="btn btn-light" onClick={handleCreat}>Create Account</button> 
+                <button type="submit" disabled={ (name && email && password) ?false:true} className="btn btn-primary" onClick={handleCreat}>Create Account</button> 
                 </>
             ):(
                 <>
                 <h5>Welcome!</h5>
-                <button type="submit" className="btn btn-light" onClick={clearForm}>Add Separate Account</button>
+                <button type="submit" className="btn btn-primary" onClick={clearForm}>Add Separate Account</button>
                 </>
             )}
                 
