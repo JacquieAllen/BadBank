@@ -34,7 +34,7 @@ function Deposit(){
           <bottom type="submit" disabled={ value ?false:true} className="btn btn-primary" onClick={handleDeposit}>Deposit that money!</bottom>
           
           </>
-      ):("Login to see balance")) : ("Accepted! Your Balance: $" + inUser.user.balance)}
+      ): ("Accepted! Your Deposit: $" + inUser.user.balance)}
      />
   )
 }
