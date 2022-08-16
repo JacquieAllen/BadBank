@@ -1,4 +1,4 @@
-function deposit(){
+function Deposit(){
   const ctx = React.useContext(UserContext);
   let inUser =ctx.loggedIn[0];
   const [update, setUpdate] = React.useState('false');
@@ -31,7 +31,7 @@ function deposit(){
           <h4>{update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h4>
           <h5>Deposit this much</h5>
           <input type="number" width="300" id="balance" onChange={handleContextChange} value={value}></input>
-          <bottom type="submit" disabled={ value ?false:true} className="btn btn-light" onClick={handleDeposit}>Deposit that money!</bottom>
+          <bottom type="submit" disabled={ value ?false:true} className="btn btn-primary" onClick={handleDeposit}>Deposit that money!</bottom>
           
           </>
       ):("Login to see balance")) : ("Accepted! Your Balance: $" + inUser.user.balance)}
