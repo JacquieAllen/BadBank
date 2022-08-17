@@ -1,9 +1,9 @@
 function Withdraw(){
-    let inUser = ctx.loggedIn[0];
     const [update, setUpdate] = React.useState('false');
     const [value, setValue]   = React.useState('');
     const [show, setShow]     = React.useState(true);
     const ctx                 = React.useContext(UserContext);
+    let inUser                = ctx.loggedIn[0];
 
     const handleNewBalance = (event) => {
         setValue(event.target.value);
