@@ -1,6 +1,7 @@
 function Home(){
     return (
         <Card 
+            bgcolor="primary"
             txtcolor="black"
             header="BigBadBank"
             title="Bank Away!"
