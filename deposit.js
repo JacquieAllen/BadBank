@@ -1,9 +1,9 @@
 function Deposit(){
-  const ctx = React.useContext(UserContext);
-  let inUser =ctx.loggedIn[0];
-  const [value, setValue] = React.useState('');
+  const ctx                 = React.useContext(UserContext);
+  const [value, setValue]   = React.useState('');
   const [update, setUpdate] = React.useState('false');
-  const [show, setShow] = React.useState(true);
+  const [show, setShow]     = React.useState(true);
+  let inUser                = ctx.loggedIn[0];
 
   const handleContextChange = (event) => {
       setValue(event.target.value);
