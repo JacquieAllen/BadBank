@@ -1,13 +1,20 @@
 function Withdraw(){
-    const ctx = React.useContext(UserContext);
     let inUser = ctx.loggedIn[0];
     const [update, setUpdate] = React.useState('false');
-    const [value, setValue] = React.useState('');
-    const [show, setShow] = React.useState(true);
+    const [value, setValue]   = React.useState('');
+    const [show, setShow]     = React.useState(true);
+    const ctx                 = React.useContext(UserContext);
 
-    const handleTextChange = (event) => {
+    const handleNewBalance = (event) => {
         setValue(event.target.value);
     }
+
+    const date = new Date(Date.now());
+    const mm = date.getMonth() + 1; 
+    const dd = date.getDate();
+    const year = date.getFullYear();
+  
+    const dateString = `${mm}/${dd}/${year}`;
 
     function handleWithdraw(){
         let balance = document.getElementById('balance').value;
@@ -28,13 +35,13 @@ function Withdraw(){
         body= {show? (inUser ? (
             <>
 
-            <h2>{update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h2>
-            <h3>Withdraw This Amount</h3>
-            <input type="number" width="300" id="balance" onChange={handleTextChange} value={value}></input>
+            <h2>{dateString} {update ? "Balance: " + inUser.user.balance : "Balance: "+ inUser.user.balance}</h2>
+            <h3>Withdraw This Amount?</h3>
+            <input type="number" width="300" id="balance" onChange={handleNewBalance} value={value}></input>
             <button type="submit" disabled={ value ?false:true} className="btn btn-primary" onClick={handleWithdraw}>Withdraw it now!</button>
 
             </>
-        ): ("")) : ("Accepted! Your Withdraw: $" + inUser.user.balance)}
+        ):("")) : ("Accepted! Your Withdraw: $" + inUser.user.balance)}
        />
     )
         }
