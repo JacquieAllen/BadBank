@@ -1,4 +1,4 @@
-function Deposit(){
+function Deposit(){  
   const ctx                 = React.useContext(UserContext);
   const [value, setValue]   = React.useState('');
   const [update, setUpdate] = React.useState('false');
@@ -24,7 +24,7 @@ function Deposit(){
       setShow(false);
       }
       else{
-          alert('Transaction Declined');
+          alert('Must Be a Positive Number');
       }
 
   }
